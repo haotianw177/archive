@@ -1,15 +1,16 @@
 .websiteArchive {
     display: flex;
-    justify-content: space-between;
+    margin: 20px 0;
     align-items: center;
-    /* border: 1px solid #ccc; */
-    padding: 10px;
-    margin-bottom: 10px;
+
   }
   
-  .websiteArchive h2, 
+  .websiteArchive h2 {
+    margin-right: 20px; /* Adds 20px margin between the title and description */
+}
   .websiteArchive p, 
   .websiteArchive a {
+    margin-right: 20px;
     margin: 0;
   }
   

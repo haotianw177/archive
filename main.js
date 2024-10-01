@@ -29,7 +29,6 @@ const firebaseConfig = {
       siteDiv.classList.add('websiteArchive');
       siteDiv.innerHTML = `
         <h2><a href="${site.url}" target="_blank">${site.title}</a></h2>
-        <h2>${site.date}</h2>
         <p>${site.description}</p>
         `;
       websiteListDiv.appendChild(siteDiv);
