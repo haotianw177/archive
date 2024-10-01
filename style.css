@@ -1,0 +1,15 @@
+.websiteArchive {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* border: 1px solid #ccc; */
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .websiteArchive h2, 
+  .websiteArchive p, 
+  .websiteArchive a {
+    margin: 0;
+  }
+  
