@@ -13,12 +13,9 @@ const firebaseConfig = {
   const analytics = firebase.analytics(app);
   const db = firebase.firestore();
   const auth = firebase.auth();
-
-
-  
   // Fetch and render websites
   const fetchWebsites = async () => {
-    const websitesCol = db.collection('websitesUrl');
+    const websitesCol = db.collection('websitesUrl').orderBy('date', 'asc'); // Change 'asc' for ascending order
     const websiteSnapshot = await websitesCol.get();
     const websiteList = websiteSnapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }));
   
@@ -30,6 +27,7 @@ const firebaseConfig = {
       siteDiv.innerHTML = `
         <h2><a href="${site.url}" target="_blank">${site.title}</a></h2>
         <p>${site.description}</p>
+        <h3>${site.date}</h3>
         `;
       websiteListDiv.appendChild(siteDiv);
     });
